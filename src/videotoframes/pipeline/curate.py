@@ -66,21 +66,6 @@ def _union_and_neighborhood_dedupe(
     return kept
 
 
-def _pick_hash_for_timestamp(
-    target_s: float,
-    frame_hashes: dict[float, imagehash.ImageHash],
-) -> imagehash.ImageHash | None:
-    """Return the hash of the sampled frame closest to `target_s`.
-
-    Used only for dedupe — the PNG written to disk is re-sampled
-    directly from the video at exact `target_s`.
-    """
-    if not frame_hashes:
-        return None
-    closest_t = min(frame_hashes, key=lambda t: abs(t - target_s))
-    return frame_hashes[closest_t]
-
-
 def _seek_and_capture(cap: cv2.VideoCapture, timestamp_s: float):
     """Seek to `timestamp_s` and return the BGR frame, or None on EOF."""
     cap.set(cv2.CAP_PROP_POS_MSEC, timestamp_s * 1000.0)
@@ -146,8 +131,4 @@ def curate(
     finally:
         cap.release()
 
-    # Use the hash map from detection for reference if the caller wants
-    # it; we're fine with the locally computed hashes since they come
-    # from seek-exact frames.
-    _ = _pick_hash_for_timestamp  # kept for future consumers
     return curated

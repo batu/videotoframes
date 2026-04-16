@@ -35,28 +35,22 @@ def test_help_is_fast():
 
 
 def test_help_does_not_import_cv2():
-    """Running --help must NOT import cv2 / scenedetect (lazy imports)."""
-    # Run a subprocess that imports cli, parses --help, then reports
-    # which heavy modules got imported. We use sys.exit before argparse
-    # aborts so we can read sys.modules.
+    """Importing the CLI module + building the parser must NOT pull cv2 /
+    scenedetect / imagehash / PIL into sys.modules — those live behind
+    the lazy subcommand import boundary so `--help` stays fast.
+    """
+    # Build the parser in a subprocess and report which heavy modules
+    # ended up imported. A direct `--help` run would sys.exit(0) before
+    # we could read sys.modules, hence the explicit `_build_parser()`.
     probe = (
-        "import sys; "
-        "import videotoframes.cli as c; "
-        "p = c._build_parser(); p.parse_known_args(['--help']); "
-    )
-    # argparse --help calls sys.exit(0) — instead of --help, we invoke
-    # a partial probe that builds the parser but doesn't parse. Then
-    # dump sys.modules.
-    probe2 = (
         "import sys; "
         "import videotoframes.cli as c; "
         "c._build_parser(); "
         "heavy = [m for m in ('cv2','scenedetect','imagehash','PIL') if m in sys.modules]; "
         "print(','.join(heavy))"
     )
-    _ = probe  # kept for context
     out = subprocess.check_output(
-        [sys.executable, "-c", probe2],
+        [sys.executable, "-c", probe],
         text=True,
     ).strip()
     assert out == "", f"cli module pulled heavy imports: {out!r}"

@@ -95,8 +95,10 @@ def probe_video(input_path: Path) -> VideoStats:
 def tail_is_black(input_path: Path, duration_s: float, window_s: float = 2.0) -> bool:
     """Return True if the last `window_s` of the video is entirely black.
 
-    Uses ffprobe's `blackdetect` filter via the `movie` input. The check
-    is cheap (it processes only the tail window).
+    Runs `ffmpeg -vf blackdetect` on a `-ss`-seeked tail window and
+    inspects the stderr channel for `black_start`/`black_end` markers.
+    The `-f null -` output discards decoded pixels — we only need the
+    filter's log lines. Cheap because only the tail window is decoded.
     """
     start_s = max(0.0, duration_s - window_s)
     # The filter emits `[blackdetect @ ...] black_start:... black_end:...`
