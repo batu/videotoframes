@@ -1,0 +1,268 @@
+{
+  "backend": "ollama/gemma4:26b",
+  "frame_count": 30,
+  "per_frame": [
+    {
+      "frame": "frame_0001.png",
+      "matched": [
+        "bw_pre_tap",
+        "hint_circle"
+      ]
+    },
+    {
+      "frame": "frame_0002.png",
+      "matched": [
+        "bw_pre_tap",
+        "hint_circle"
+      ]
+    },
+    {
+      "frame": "frame_0003.png",
+      "matched": [
+        "bw_pre_tap",
+        "hint_circle"
+      ]
+    },
+    {
+      "frame": "frame_0004.png",
+      "matched": [
+        "bw_pre_tap",
+        "hint_circle"
+      ]
+    },
+    {
+      "frame": "frame_0005.png",
+      "matched": [
+        "hint_circle"
+      ]
+    },
+    {
+      "frame": "frame_0006.png",
+      "matched": []
+    },
+    {
+      "frame": "frame_0007.png",
+      "matched": [
+        "hint_circle",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0008.png",
+      "matched": [
+        "hint_circle",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0009.png",
+      "matched": [
+        "hint_circle",
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0010.png",
+      "matched": [
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0011.png",
+      "matched": [
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0012.png",
+      "matched": [
+        "hint_circle",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0013.png",
+      "matched": [
+        "retry_overlay",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0014.png",
+      "matched": [
+        "hint_circle"
+      ]
+    },
+    {
+      "frame": "frame_0015.png",
+      "matched": [
+        "hint_circle",
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0016.png",
+      "matched": [
+        "hint_circle",
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0017.png",
+      "matched": [
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0018.png",
+      "matched": [
+        "hint_circle",
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0019.png",
+      "matched": [
+        "hint_circle",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0020.png",
+      "matched": []
+    },
+    {
+      "frame": "frame_0021.png",
+      "matched": [
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0022.png",
+      "matched": [
+        "level_complete"
+      ]
+    },
+    {
+      "frame": "frame_0023.png",
+      "matched": [
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0024.png",
+      "matched": []
+    },
+    {
+      "frame": "frame_0025.png",
+      "matched": [
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0026.png",
+      "matched": [
+        "level_complete"
+      ]
+    },
+    {
+      "frame": "frame_0027.png",
+      "matched": []
+    },
+    {
+      "frame": "frame_0028.png",
+      "matched": [
+        "bw_pre_tap",
+        "hint_circle"
+      ]
+    },
+    {
+      "frame": "frame_0029.png",
+      "matched": [
+        "bw_pre_tap",
+        "settings_modal"
+      ]
+    },
+    {
+      "frame": "frame_0030.png",
+      "matched": [
+        "bw_pre_tap",
+        "settings_modal"
+      ]
+    }
+  ],
+  "covered_buckets": {
+    "bw_pre_tap": [
+      "frame_0001.png",
+      "frame_0002.png",
+      "frame_0003.png",
+      "frame_0004.png",
+      "frame_0028.png",
+      "frame_0029.png",
+      "frame_0030.png"
+    ],
+    "revealed_color": [
+      "frame_0007.png",
+      "frame_0008.png",
+      "frame_0009.png",
+      "frame_0010.png",
+      "frame_0011.png",
+      "frame_0012.png",
+      "frame_0013.png",
+      "frame_0015.png",
+      "frame_0016.png",
+      "frame_0017.png",
+      "frame_0018.png",
+      "frame_0019.png",
+      "frame_0021.png",
+      "frame_0023.png",
+      "frame_0025.png"
+    ],
+    "hint_circle": [
+      "frame_0001.png",
+      "frame_0002.png",
+      "frame_0003.png",
+      "frame_0004.png",
+      "frame_0005.png",
+      "frame_0007.png",
+      "frame_0008.png",
+      "frame_0009.png",
+      "frame_0012.png",
+      "frame_0014.png",
+      "frame_0015.png",
+      "frame_0016.png",
+      "frame_0018.png",
+      "frame_0019.png",
+      "frame_0028.png"
+    ],
+    "level_complete": [
+      "frame_0009.png",
+      "frame_0015.png",
+      "frame_0016.png",
+      "frame_0018.png",
+      "frame_0021.png",
+      "frame_0022.png",
+      "frame_0023.png",
+      "frame_0025.png",
+      "frame_0026.png"
+    ],
+    "retry_overlay": [
+      "frame_0013.png"
+    ],
+    "settings_modal": [
+      "frame_0029.png",
+      "frame_0030.png"
+    ]
+  },
+  "missing_buckets": [
+    "voronoi_reveal",
+    "wrong_tap_red_x"
+  ]
+}

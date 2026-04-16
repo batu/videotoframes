@@ -12,10 +12,23 @@ dependencies = [
     "opencv-python-headless>=4.10",
     "imagehash>=4.3",
     "pyyaml>=6.0",
+    "pillow>=10.0",
 ]
 
 [project.scripts]
 videotoframes = "videotoframes.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -23,3 +36,14 @@ where = ["src"]
 [tool.ruff]
 line-length = 100
 indent-width = 4
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "unit: pure in-memory tests with no subprocess/cv2 — default CI",
+    "integration: runs real ffmpeg + cv2 on a fixture video",
+    "validation: runs Gemma-via-Ollama (or Claude) vision on find_the_dog.mp4",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning:imagehash.*",
+]
