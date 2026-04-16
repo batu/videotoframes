@@ -1,6 +1,6 @@
 {
   "backend": "ollama/gemma4:26b",
-  "frame_count": 30,
+  "frame_count": 41,
   "per_frame": [
     {
       "frame": "frame_0001.png",
@@ -33,31 +33,33 @@
     {
       "frame": "frame_0005.png",
       "matched": [
+        "bw_pre_tap",
         "hint_circle"
       ]
     },
     {
       "frame": "frame_0006.png",
-      "matched": []
+      "matched": [
+        "hint_circle",
+        "revealed_color"
+      ]
     },
     {
       "frame": "frame_0007.png",
       "matched": [
-        "hint_circle",
         "revealed_color"
       ]
     },
     {
       "frame": "frame_0008.png",
       "matched": [
-        "hint_circle",
+        "level_complete",
         "revealed_color"
       ]
     },
     {
       "frame": "frame_0009.png",
       "matched": [
-        "hint_circle",
         "level_complete",
         "revealed_color"
       ]
@@ -77,121 +79,192 @@
     {
       "frame": "frame_0012.png",
       "matched": [
-        "hint_circle",
-        "revealed_color"
+        "bw_pre_tap",
+        "hint_circle"
       ]
     },
     {
       "frame": "frame_0013.png",
       "matched": [
-        "retry_overlay",
         "revealed_color"
       ]
     },
     {
       "frame": "frame_0014.png",
       "matched": [
-        "hint_circle"
+        "revealed_color"
       ]
     },
     {
       "frame": "frame_0015.png",
       "matched": [
-        "hint_circle",
-        "level_complete",
+        "retry_overlay",
         "revealed_color"
       ]
     },
     {
       "frame": "frame_0016.png",
       "matched": [
-        "hint_circle",
-        "level_complete",
-        "revealed_color"
+        "hint_circle"
       ]
     },
     {
       "frame": "frame_0017.png",
       "matched": [
-        "revealed_color"
+        "hint_circle",
+        "voronoi_reveal"
       ]
     },
     {
       "frame": "frame_0018.png",
       "matched": [
         "hint_circle",
-        "level_complete",
-        "revealed_color"
+        "voronoi_reveal"
       ]
     },
     {
       "frame": "frame_0019.png",
       "matched": [
-        "hint_circle",
+        "level_complete",
         "revealed_color"
       ]
     },
     {
       "frame": "frame_0020.png",
-      "matched": []
+      "matched": [
+        "hint_circle",
+        "level_complete",
+        "revealed_color"
+      ]
     },
     {
       "frame": "frame_0021.png",
       "matched": [
-        "level_complete",
         "revealed_color"
       ]
     },
     {
       "frame": "frame_0022.png",
       "matched": [
-        "level_complete"
+        "hint_circle",
+        "level_complete",
+        "revealed_color"
       ]
     },
     {
       "frame": "frame_0023.png",
       "matched": [
+        "hint_circle",
         "level_complete",
         "revealed_color"
       ]
     },
     {
       "frame": "frame_0024.png",
-      "matched": []
-    },
-    {
-      "frame": "frame_0025.png",
       "matched": [
-        "level_complete",
         "revealed_color"
       ]
     },
     {
-      "frame": "frame_0026.png",
-      "matched": [
-        "level_complete"
-      ]
-    },
-    {
-      "frame": "frame_0027.png",
-      "matched": []
-    },
-    {
-      "frame": "frame_0028.png",
+      "frame": "frame_0025.png",
       "matched": [
         "bw_pre_tap",
         "hint_circle"
       ]
     },
     {
+      "frame": "frame_0026.png",
+      "matched": []
+    },
+    {
+      "frame": "frame_0027.png",
+      "matched": [
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0028.png",
+      "matched": [
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
       "frame": "frame_0029.png",
+      "matched": [
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0030.png",
+      "matched": [
+        "level_complete"
+      ]
+    },
+    {
+      "frame": "frame_0031.png",
+      "matched": [
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0032.png",
+      "matched": [
+        "level_complete"
+      ]
+    },
+    {
+      "frame": "frame_0033.png",
+      "matched": [
+        "level_complete",
+        "revealed_color"
+      ]
+    },
+    {
+      "frame": "frame_0034.png",
+      "matched": [
+        "level_complete"
+      ]
+    },
+    {
+      "frame": "frame_0035.png",
+      "matched": []
+    },
+    {
+      "frame": "frame_0036.png",
+      "matched": []
+    },
+    {
+      "frame": "frame_0037.png",
+      "matched": [
+        "level_complete"
+      ]
+    },
+    {
+      "frame": "frame_0038.png",
+      "matched": [
+        "level_complete"
+      ]
+    },
+    {
+      "frame": "frame_0039.png",
+      "matched": [
+        "bw_pre_tap",
+        "hint_circle"
+      ]
+    },
+    {
+      "frame": "frame_0040.png",
       "matched": [
         "bw_pre_tap",
         "settings_modal"
       ]
     },
     {
-      "frame": "frame_0030.png",
+      "frame": "frame_0041.png",
       "matched": [
         "bw_pre_tap",
         "settings_modal"
@@ -204,26 +277,38 @@
       "frame_0002.png",
       "frame_0003.png",
       "frame_0004.png",
-      "frame_0028.png",
-      "frame_0029.png",
-      "frame_0030.png"
+      "frame_0005.png",
+      "frame_0012.png",
+      "frame_0025.png",
+      "frame_0039.png",
+      "frame_0040.png",
+      "frame_0041.png"
+    ],
+    "voronoi_reveal": [
+      "frame_0017.png",
+      "frame_0018.png"
     ],
     "revealed_color": [
+      "frame_0006.png",
       "frame_0007.png",
       "frame_0008.png",
       "frame_0009.png",
       "frame_0010.png",
       "frame_0011.png",
-      "frame_0012.png",
       "frame_0013.png",
+      "frame_0014.png",
       "frame_0015.png",
-      "frame_0016.png",
-      "frame_0017.png",
-      "frame_0018.png",
       "frame_0019.png",
+      "frame_0020.png",
       "frame_0021.png",
+      "frame_0022.png",
       "frame_0023.png",
-      "frame_0025.png"
+      "frame_0024.png",
+      "frame_0027.png",
+      "frame_0028.png",
+      "frame_0029.png",
+      "frame_0031.png",
+      "frame_0033.png"
     ],
     "hint_circle": [
       "frame_0001.png",
@@ -231,38 +316,44 @@
       "frame_0003.png",
       "frame_0004.png",
       "frame_0005.png",
-      "frame_0007.png",
-      "frame_0008.png",
-      "frame_0009.png",
+      "frame_0006.png",
       "frame_0012.png",
-      "frame_0014.png",
-      "frame_0015.png",
       "frame_0016.png",
+      "frame_0017.png",
       "frame_0018.png",
-      "frame_0019.png",
-      "frame_0028.png"
-    ],
-    "level_complete": [
-      "frame_0009.png",
-      "frame_0015.png",
-      "frame_0016.png",
-      "frame_0018.png",
-      "frame_0021.png",
+      "frame_0020.png",
       "frame_0022.png",
       "frame_0023.png",
       "frame_0025.png",
-      "frame_0026.png"
+      "frame_0039.png"
+    ],
+    "level_complete": [
+      "frame_0008.png",
+      "frame_0009.png",
+      "frame_0019.png",
+      "frame_0020.png",
+      "frame_0022.png",
+      "frame_0023.png",
+      "frame_0027.png",
+      "frame_0028.png",
+      "frame_0029.png",
+      "frame_0030.png",
+      "frame_0031.png",
+      "frame_0032.png",
+      "frame_0033.png",
+      "frame_0034.png",
+      "frame_0037.png",
+      "frame_0038.png"
     ],
     "retry_overlay": [
-      "frame_0013.png"
+      "frame_0015.png"
     ],
     "settings_modal": [
-      "frame_0029.png",
-      "frame_0030.png"
+      "frame_0040.png",
+      "frame_0041.png"
     ]
   },
   "missing_buckets": [
-    "voronoi_reveal",
     "wrong_tap_red_x"
   ]
 }

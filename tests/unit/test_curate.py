@@ -34,10 +34,10 @@ def test_neighborhood_drops_close_events():
 def test_scene_cut_upgrades_recent_ui_change():
     """If a scene cut lands within the neighborhood AFTER a UI change,
     the kept event should be upgraded to a scene cut (stronger signal)."""
-    # 0.0 (opening scene-cut), 0.6 (UI kept), 0.8 (scene cut inside
-    # the 0.5s neighborhood of 0.6 → upgrades 0.6 to scene cut).
+    # 0.0 (opening scene-cut), 0.6 (UI kept), 0.75 (scene cut inside
+    # the 0.2s neighborhood of 0.6 → upgrades 0.6 to scene cut).
     events = _union_and_neighborhood_dedupe(
-        scene_cuts=[0.8],
+        scene_cuts=[0.75],
         ui_changes=[0.6],
     )
     assert [(e[0], e[1]) for e in events] == [(0.0, True), (0.6, True)]
