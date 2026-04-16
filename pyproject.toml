@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "videotoframes"
+version = "0.0.1"
+description = "Video to curated key frames. Single-decode ffmpeg + PySceneDetect + dHash."
+requires-python = ">=3.11"
+dependencies = [
+    "scenedetect>=0.6",
+    "opencv-python-headless>=4.10",
+    "imagehash>=4.3",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+videotoframes = "videotoframes.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
