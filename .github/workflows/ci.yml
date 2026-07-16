@@ -1,0 +1,21 @@
+name: CI
+
+# Managed by `agency refresh` — installed only in Python (pyproject.toml)
+# projects that had no CI workflow of their own. Any local edit releases the
+# file from management: it classifies as MODIFIED and is never overwritten.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync
+      - run: uv run pytest -q
+      - run: uv run ruff check
