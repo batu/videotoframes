@@ -1,8 +1,8 @@
 name: CI
 
-# Managed by `agency refresh` — installed only in Python (pyproject.toml)
-# projects that had no CI workflow of their own. Any local edit releases the
-# file from management: it classifies as MODIFIED and is never overwritten.
+# Project-customized copy of the agency uv CI template (this edit releases it
+# from agency management): frame-extraction tests shell out to ffprobe/ffmpeg,
+# which the runner image does not ship.
 
 on:
   push:
@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
